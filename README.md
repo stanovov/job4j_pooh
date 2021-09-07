@@ -1,0 +1,1 @@
+[![Build Status](https://app.travis-ci.com/stanovov/job4j_pooh.svg?branch=main)](https://app.travis-ci.com/stanovov/job4j_pooh)
