@@ -21,4 +21,18 @@ public class RespTest {
         int result = resp.status();
         assertThat(result, is(expected));
     }
+
+    @Test
+    public void whenEquals2Resp() {
+        Resp resp1 = new Resp("TEST", 200);
+        Resp resp2 = new Resp("TEST", 200);
+        assertEquals(resp1, resp2);
+    }
+
+    @Test
+    public void whenHashcode2Resp() {
+        Resp resp1 = new Resp("TEST", 200);
+        Resp resp2 = new Resp("TEST", 200);
+        assertEquals(resp1.hashCode(), resp2.hashCode());
+    }
 }

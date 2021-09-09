@@ -63,4 +63,20 @@ public class ReqTest {
         assertThat(req.name(), is("something"));
         assertThat(req.id(), is(1));
     }
+
+    @Test
+    public void whenEquals2Req() {
+        String content = "GET /topic/something/1 HTTP/1.1";
+        Req req1 = Req.of(content);
+        Req req2 = Req.of(content);
+        assertEquals(req1, req2);
+    }
+
+    @Test
+    public void whenHashcode2Req() {
+        String content = "GET /topic/something/1 HTTP/1.1";
+        Req req1 = Req.of(content);
+        Req req2 = Req.of(content);
+        assertEquals(req1.hashCode(), req2.hashCode());
+    }
 }
